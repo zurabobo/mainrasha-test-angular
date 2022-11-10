@@ -1,0 +1,5 @@
+<div class="route-bar">
+  <a routerLink="/main" class="route-bar-item" routerLinkActive="route-bar-item_active">{{'main' | translate}}</a>
+  <a *ngFor="let property of routeProperties" class="route-bar-item" routerLinkActive="route-bar-item_active"
+    routerLink={{property.path}}>{{property.key | translate}}</a>
+</div>

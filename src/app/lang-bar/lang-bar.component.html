@@ -1,0 +1,7 @@
+<div class="langbar">
+  <button [ngClass]="[lang === translate.currentLang ? 'langbar__btn langbar__btn_active' : 'langbar__btn']" *ngFor="let lang of translate.getLangs()" (click)="translate.use(lang)">
+    {{lang}}
+  </button>
+  <span class="langbar__span">/</span>
+</div>
+

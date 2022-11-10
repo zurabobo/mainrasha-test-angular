@@ -1,0 +1,112 @@
+<!-- <div *ngIf="bloggerLocation">
+  <app-blogger [selectedCard]="selectedCard"></app-blogger>
+</div> -->
+
+<ul *ngIf="bloggersLocation" class="bloggers-card__list">
+  <li *ngFor="let data of cards" class="bloggers-card__list-item" (click)="handleClick(data)">
+    <article class="bloggers-card">
+      <a class="bloggers-card__link" id="{{data.id}}" style="background-image: url({{data.link}})">
+        <div class="bloggers-card__info-container">
+          <h3 class="card__title">{{data.key | translate}}</h3>
+          <div class="bloggers-card__followers">
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon" alt="youtube" src="../../assets/images/youtube.svg" />
+              <span class="bloggers-card__followers-count">{{data.youtube}}</span>
+            </div>
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon" alt="vk" src="../../assets/images/vk.svg" />
+              <span class="bloggers-card__followers-count">{{data.vk}}</span>
+            </div>
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon" alt="instagram" src="../../assets/images/instagram.svg" />
+              <span class="bloggers-card__followers-count">{{data.instagram}}</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+  </li>
+</ul>
+<div *ngIf="!bloggersLocation" class="bloggers-card__list_location-container">
+  <ul (wheel)="onWheel($event)" #widgetsContent class="bloggers-card__list bloggers-card__list_location">
+    <li *ngFor="let data of cards" class="bloggers-card__list-item" (click)="handleClick(data)">
+      <article class="bloggers-card">
+        <a href="#blogger" style="background-image: url({{data.link}})" class="bloggers-card__link bloggers-card__link_location">
+          <div class="bloggers-card__info-container">
+            <h3 class="card__title">{{data.key | translate}}</h3>
+            <div class="bloggers-card__followers">
+              <div class="bloggers-card__followers-container">
+                <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="youtube"
+                  src="../../assets/images/youtube.svg" />
+                <span class="bloggers-card__followers-count">{{data.youtube}}</span>
+              </div>
+              <div class="bloggers-card__followers-container">
+                <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="vk"
+                  src="../../assets/images/vk.svg" />
+                <span class="bloggers-card__followers-count">{{data.vk}}</span>
+              </div>
+              <div class="bloggers-card__followers-container">
+                <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="instagram"
+                  src="../../assets/images/instagram.svg" />
+                <span class="bloggers-card__followers-count">{{data.instagram}}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </article>
+    </li>
+  </ul>
+  <button class="bloggers-card__list-scrollbtn-left" type="button" (click)="scrollLeft()"></button>
+  <button class="bloggers-card__list-scrollbtn-right" type="button" (click)="scrollRight()"></button>
+</div>
+
+
+
+<!-- <div >
+    <article  class="bloggers-card">
+      <a class="bloggers-card__link" id="{{data.id}}" href="/blogger" style="background-image: url({{data.link}})" (click)="handleClick(data)">
+        <div class="bloggers-card__info-container">
+          <h3 class="card__title">{{data.title}}</h3>
+          <div class="bloggers-card__followers">
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon" alt="youtube" src="../../assets/images/youtube.svg" />
+              <span class="bloggers-card__followers-count">{{data.youtube}}</span>
+            </div>
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon" alt="vk" src="../../assets/images/vk.svg" />
+              <span class="bloggers-card__followers-count">{{data.vk}}</span>
+            </div>
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon" alt="instagram" src="../../assets/images/instagram.svg" />
+              <span class="bloggers-card__followers-count">{{data.instagram}}</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+    <div *ngIf="!bloggersLocation">
+      <a style="background-image: url({{data.link}})" class="bloggers-card__link bloggers-card__link_location"
+      (click)="handleClick(data)">
+        <div class="bloggers-card__info-container">
+          <h3 class="card__title">{{data.title}}</h3>
+          <div class="bloggers-card__followers">
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="youtube"
+                src="../../assets/images/youtube.svg" />
+              <span class="bloggers-card__followers-count">{{data.youtube}}</span>
+            </div>
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="vk"
+                src="../../assets/images/vk.svg" />
+              <span class="bloggers-card__followers-count">{{data.vk}}</span>
+            </div>
+            <div class="bloggers-card__followers-container">
+              <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="instagram"
+                src="../../assets/images/instagram.svg" />
+              <span class="bloggers-card__followers-count">{{data.instagram}}</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div> -->

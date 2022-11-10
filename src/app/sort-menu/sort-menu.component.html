@@ -1,0 +1,28 @@
+<div class="sort-menu__container">
+  <div class="sort-menu__header">
+    <h3 class="sort-menu__header-item">{{'sort_by' | translate}}</h3>
+    <ul class="sort-menu">
+      <li class="sort-menu__list">
+        <a class="sort-menu__item">{{'platform_choose' | translate}}</a>
+        <ul class="sort-menu__submenu">
+          <li class="sort-menu__submenu-list">
+            <a *ngFor="let property of platformProperties" class="sort-menu__submenu-item" href={{property.link}}
+              target="_blank" rel="noreferrer">{{property.key | translate}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="sort-menu">
+      <li class="sort-menu__list">
+        <a class="sort-menu__item">{{'direction_choose' | translate}}</a>
+        <ul class="sort-menu__submenu">
+          <li class="sort-menu__submenu-list">
+            <a *ngFor="let property of directionProperties" class="sort-menu__submenu-item">{{property.key |
+              translate}}</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

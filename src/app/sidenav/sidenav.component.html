@@ -1,0 +1,7 @@
+<mat-sidenav-container hasBackdrop class="sidenav-container">
+  <mat-sidenav position="end" [fixedInViewport]="true" opened="false" #sidenav mode="over" class="sidenav">
+    <button class="sidebar__button" (click)="sidenav.close()"></button>
+    <app-lang-bar></app-lang-bar>
+    <app-nav-menu (click)="sidenav.close()"></app-nav-menu>
+  </mat-sidenav>
+</mat-sidenav-container>

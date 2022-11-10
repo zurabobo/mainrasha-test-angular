@@ -1,0 +1,8 @@
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__list-item">
+      <a *ngFor="let property of menuProperties" class="menu__list-link" routerLinkActive="menu__list-link_active"
+        routerLink={{property.path}}>{{property.key | translate}}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,71 @@
+.sidebar__button {
+  background-image: url("../../assets/images/cross.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  position: absolute;
+  top: 27px;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  padding: 0;
+}
+
+.sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  background: #262b36;
+}
+
+.sidenav-container {
+  z-index: 22;
+}
+
+.sidebar__button {
+  background-image: url("../../assets/images/cross.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  position: absolute;
+  top: 27px;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  padding: 0;
+}
+
+.sidebar__button:hover {
+  cursor: pointer;
+}
+
+::ng-deep .mat-drawer-container {
+  background-color: unset;
+  height: 100%;
+}
+
+::ng-deep .mat-drawer-inner-container {
+  background-color: #eff3f5;
+}
+
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+  position: fixed;
+}
+
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown::before {
+  content: "";
+  background-color: unset;
+}
+
+.sidebar_invisible {
+  right: -100%;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {
+    width: 100%;
+  }
+}

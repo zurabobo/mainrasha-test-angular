@@ -1,0 +1,23 @@
+<!-- <header class="header"> -->
+<!-- <a routerLink="/main">
+    <img class="header__logo" src="../../assets/images/logo.png" alt="лого" />
+  </a>
+  <app-nav-menu></app-nav-menu>
+  <button mat-button *ngIf="(isMobile | async)?.matches" class="header__sidenav-toggle-button" (click)="toggleSidenav()"></button> -->
+<!-- <app-nav-menu></app-nav-menu> -->
+<!-- <app-hamburger-menu></app-hamburger-menu> -->
+<!-- </header> -->
+
+
+<header class="header">
+  <a routerLink="/main">
+    <img class="header__logo" src="../../assets/images/logo.png" alt="лого" />
+  </a>
+  <div *ngIf="(isMobile | async)?.matches">
+    <button mat-button class="header__sidenav-toggle-button" (click)="toggleSidenav()"></button>
+  </div>
+  <ng-container *ngIf="!(isMobile | async)?.matches">
+    <app-nav-menu></app-nav-menu>
+    <app-lang-bar></app-lang-bar>
+  </ng-container>
+</header>

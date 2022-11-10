@@ -1,0 +1,10 @@
+<ul class="videos-card__list">
+  <li *ngFor="let data of videoCards" class="videos-card__list-item" key={item.id}>
+    <article id={data.id} class="videos-card">
+      <a class="videos-card__link" href={{data.link}} target="_blank" rel="noopener noreferrer nofollow" >
+    <img class="videos-card__image" style="background-image: url({{data.image}})" alt="" />
+    <button class="videos-card__play-btn" type="button" ></button>
+  </a>
+    </article>
+  </li>
+</ul>

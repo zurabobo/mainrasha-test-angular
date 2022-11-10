@@ -1,0 +1,50 @@
+<article *ngIf="card" id="blogger" class="blogger">
+  <div class="blogger__container">
+    <img class="bloggers-card__link_blogger-location" src={{card.link}} alt={{card.title}} />
+    <div class="bloggers-card__info-container_location">
+      <h3 class="bloggers-card__title">{{card.key | translate}}</h3>
+      <div class="bloggers-card__followers bloggers-card__followers_location">
+        <div class="bloggers-card__followers-container bloggers-card__followers-container_location">
+          <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="youtube"
+            src="../../assets/images/youtube-color.svg" />
+          <span class="bloggers-card__followers-count bloggers-card__followers-count_location">{{card.youtube}}</span>
+          <span class="bloggers-card__followers-span">{{'subscribers' | translate}}</span>
+        </div>
+        <div class="bloggers-card__followers-container bloggers-card__followers-container_location">
+          <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="youtube"
+            src="../../assets/images/vk-color.svg" />
+          <span class="bloggers-card__followers-count bloggers-card__followers-count_location">{{card.vk}}</span>
+          <span class="bloggers-card__followers-span">{{'subscribers' | translate}}</span>
+        </div>
+        <div class="bloggers-card__followers-container bloggers-card__followers-container_location">
+          <img class="bloggers-card__followers-icon bloggers-card__followers-icon_location" alt="youtube"
+            src="../../assets/images/instagram-color.svg" />
+          <span class="bloggers-card__followers-count bloggers-card__followers-count_location">{{card.instagram}}</span>
+          <span class="bloggers-card__followers-span">{{'subscribers' | translate}}</span>
+        </div>
+      </div>
+      <div class="blogger__channel-info">
+        <div class="blogger__channel-info_container">
+          <h3 class="blogger__channel-title">{{'channel_information' | translate}}</h3>
+          <p class="blogger__channel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Risus elit lobortis pellentesque tellus mi nulla morbi. Risus, quis consectetur sagittis pharetra, urna,
+            leo.
+            Egestas porta habitasse fermentum nulla neque. At eget leo sed bibendum nunc.
+            Diam neque, eu velit urna, feugiat vulputate elit justo. Lectus diam lacus vel donec sit.
+            Vitae venenatis amet suscipit enim nec tincidunt sit lacus. Morbi orci, eget vitae tortor cras at eu duis.
+            Sit est, cursus sem facilisis sed ac.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Risus elit lobortis pellentesque tellus mi nulla morbi. Risus, quis consectetur sagittis pharetra, urna,
+            leo.
+            Egestas porta habitasse fermentum nulla neque. At eget leo sed bibendum nunc.
+            Diam neque, eu velit urna, feugiat vulputate elit justo. Lectus diam lacus vel donec sit.
+            Vitae venenatis amet suscipit enim nec tincidunt sit lacus. Morbi orci, eget vitae tortor cras at eu duis.
+            Sit est, cursus sem facilisis sed ac </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-videos></app-videos>
+</article>
+<app-title></app-title>
+<app-bloggers-card></app-bloggers-card>
