@@ -1,4 +1,4 @@
-# [Demo on Netlify](https://github.com/zurabobo/mainrasha-test-angular)
+# [Demo on Netlify](https://mainrasha-test-angular.netlify.app/bloggers)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
