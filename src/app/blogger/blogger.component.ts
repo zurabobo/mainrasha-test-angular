@@ -1,24 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { BLOGGERS_CARD_DATA, BloggersCardData } from 'src/environments/environment';
-
-// @Component({
-//   selector: 'app-blogger',
-//   templateUrl: './blogger.component.html',
-//   styleUrls: ['./blogger.component.css']
-// })
-// export class BloggerComponent implements OnInit {
-
-//   cardData: BloggersCardData[] = [];
-
-//   constructor() {
-//     this.cardData = BLOGGERS_CARD_DATA;
-//   }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CardService, Card } from '../card.service';

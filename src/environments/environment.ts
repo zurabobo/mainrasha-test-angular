@@ -190,8 +190,6 @@ const directionProperties = [
   },
 ];
 
-const bloggersLocation = window.location.pathname === '/bloggers';
-
 export interface RouteProperty {
   title: string;
   path: string;
@@ -215,29 +213,12 @@ export interface DirectionProperty {
   key: string;
 }
 
-export interface BloggersCardData {
-  id: number;
-  link: string;
-  title: string;
-  youtube: string;
-  vk: string;
-  instagram: string;
-  key: string;
-}
-
-export interface VideosCardData {
-  id: number;
-  link: string;
-  image: any;
-}
-
 export const environment = {
-  production: false,
-  routeProperties,
-  BLOGGERS_CARD_DATA,
-  VIDEOS_CARD_LIST_DATA,
-  menuProperties,
-  platformProperties,
-  directionProperties,
-  bloggersLocation,
+  production: true,
+  routeProperties: routeProperties,
+  cardsApiUrl: BLOGGERS_CARD_DATA,
+  videosApiUrl: VIDEOS_CARD_LIST_DATA,
+  menuProperties: menuProperties,
+  platformProperties: platformProperties,
+  directionProperties: directionProperties,
 };

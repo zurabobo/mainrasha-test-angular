@@ -5,24 +5,11 @@ import { VideoCard, VideoCardService } from './videos-card.service';
 @Component({
   selector: 'app-videos-card',
   templateUrl: './videos-card.component.html',
-  styleUrls: ['./videos-card.component.css']
+  styleUrls: ['./videos-card.component.css'],
 })
 export class VideosCardComponent implements OnInit {
-
-  
-  bloggersLocation = window.location.pathname === '/bloggers';
-  bloggerLocation = window.location.pathname === '/blogger/:id';
-  // currentCardData: BloggersCardData | undefined;
-  // selectedCard: BloggersCardData[] = []
-  // selectedCard: Array<any>
   videoCards: VideoCard[] = [];
-  constructor(
-    private router: Router,
-    private service: VideoCardService
-  ) {
-    // this.data = [];
-    // this.cardData = BLOGGERS_CARD_DATA;
-  }
+  constructor(private router: Router, private service: VideoCardService) {}
 
   ngOnInit(): void {
     this.service.getVideoCards().then((cards) => (this.videoCards = cards));
@@ -31,5 +18,4 @@ export class VideosCardComponent implements OnInit {
   handleClick(card: VideoCard) {
     this.router.navigate(['/blogger', card.id]);
   }
-
 }
